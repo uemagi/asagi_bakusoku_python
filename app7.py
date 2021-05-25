@@ -82,7 +82,7 @@ if input_data is not None:
         ('default','male','female','neutral')
     )
     st.markdown('### 音声合成')
-    st.write('しゃーない読んだるから耳の穴かっぽじってよー聞けよ？ほなここ押してみ！！',  Color= 'orange')
+    st.write('しゃーない読んだるから耳の穴かっぽじってよー聞けよ？ほなここ押してみ！！')
     if st.button('しゃーない読んだるから耳の穴かっぽじってよー聞けよ？ほなここ押してみ！！'):
         comment = st.empty()
         comment.write('音声出力を開始するで？ええな？')

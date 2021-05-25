@@ -83,7 +83,7 @@ if input_data is not None:
     )
     st.markdown('### 音声合成')
     st.write('しゃーない読んだるから耳の穴かっぽじってよー聞けよ？ほなここ押してみ！！')
-    if st.button('しゃーない読んだるから耳の穴かっぽじってよー聞けよ？ほなここ押してみ！！',  ColorPickerMixin= 'orange'):
+    if st.button('しゃーない読んだるから耳の穴かっぽじってよー聞けよ？ほなここ押してみ！！',  Color= 'orange'):
         comment = st.empty()
         comment.write('音声出力を開始するで？ええな？')
         response = synthesize_speech(input_data, lang, gender=gender)

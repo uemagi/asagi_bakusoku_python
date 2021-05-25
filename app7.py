@@ -21,7 +21,7 @@ def synthesize_speech(text, lang ='日本語',gender= 'default'):
     }
 
     lang_code = {
-        '英語':'en-US',
+        '英語やで？ええん？ほんまに？わかる？':'en-US',
         '日本語':'ja-JP'
     }
 
@@ -48,32 +48,32 @@ def synthesize_speech(text, lang ='日本語',gender= 'default'):
     return response
 
     
-st.title('音声出力アプリ')
+st.title('音声出力アプリ,いわゆる棒読みちゃんやで')
 
-st.markdown('###  データ準備')
+st.markdown('###  データ準備したるで')
 input_option = st.selectbox(
     '入力データの選択',
-    ('直接入力','テキストファイル')
+    ('直接入力する？？','テキストファイルもっとるん自分？.txtのやつやで？')
 )
 input_data = None
 
-if input_option  == '直接入力':
-    input_data = st.text_area('こちらにテキストを入力してください。','Cloud SpeechーtoーText用のサンプル文になります。')
+if input_option  == '直接入力する？？':
+    input_data = st.text_area('ここに読んで欲しい文書けよ！！。','ここに早よかけ言うてるやん！！！そうじゃないとこの文読むで？ええんか？')
 else:
-    uploaded_file = st.file_uploader('テキストファイルをアップロードしてください。',['txt'])
+    uploaded_file = st.file_uploader('テキストファイルもっとるん自分？.txtのやつやで？',['txt'])
     if uploaded_file is not None:
         content = uploaded_file.read()
         input_data = content.decode()
 
 if input_data is not None:
-    st.write('入力データ')
+    st.write('これでええか？')
     st.write(input_data)
     st.markdown('###  パラメーター設定')
     st.subheader(('言語と話者の性別選択'))
 
     lang = st.selectbox(
         '言語を選択しろやぼけええええ',
-        ('日本語','英語')
+        ('日本語','英語やで？ええん？ほんまに？わかる？')
 
     )
     gender = st.selectbox(
@@ -82,7 +82,7 @@ if input_data is not None:
     )
     st.markdown('### 音声合成')
     st.write('この文読んだるからちゃーんと聞いとけよ？')
-    if st.button('開始'):
+    if st.button('しゃーない読んだるから耳の穴かっぽじってよー聞けよ？'):
         comment = st.empty()
         comment.write('音声出力を開始するで？ええな？')
         response = synthesize_speech(input_data, lang, gender=gender)
